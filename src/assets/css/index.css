@@ -11,10 +11,12 @@
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 #ticket-gen > *,
-#output-section h2 {
+#output-section h2,
+#sidebar {
   background-color: #ffffff;
 }
 
@@ -26,4 +28,12 @@
 
 #output-section {
   max-width: 512px;
+}
+
+#sidebar > .content {
+  overflow-y: auto;
+  scrollbar-gutter: stable both-edges;
+  padding-right: 15px;
+  padding-left: 15px;
+  scroll-behavior: smooth;
 }
