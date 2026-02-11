@@ -1,6 +1,26 @@
+import { use, useState } from "react";
 import { GiPowerButton } from "react-icons/gi";
 
 export default function App() {
+  const [passenger, setPassenger] = useState("");
+  const [distance, setDistance] = useState(5);
+  const [age, setAge] = useState("Maggiorenne");
+
+  const handlePassengerChanges = (e) => {
+    setPassenger(e.target.value);
+    console.log(e.target.value);
+  };
+
+  const handleDistanceChanges = (e) => {
+    setDistance(e.target.value);
+    console.log(e.target.value);
+  };
+
+  const handleAgeChanges = (e) => {
+    setAge(e.target.value);
+    console.log(e.target.value);
+  };
+
   return (
     <div className="container p-1 text-center">
       <section id="ticket-gen">
@@ -19,7 +39,9 @@ export default function App() {
                     className="text-center"
                     type="text"
                     id="input-name"
+                    value={passenger}
                     required
+                    onChange={handlePassengerChanges}
                   />
                 </div>
               </div>
@@ -38,8 +60,9 @@ export default function App() {
                     id="input-distance"
                     min="5"
                     step="5"
-                    value="5"
+                    value={distance}
                     required
+                    onChange={handleDistanceChanges}
                   />
                 </div>
               </div>
@@ -49,11 +72,15 @@ export default function App() {
                   <label htmlFor="input-age" className="bg-dark text-white">
                     CLASSE
                   </label>
-                  <select className="text-center" name="age" id="input-age">
+                  <select
+                    className="text-center"
+                    name="age"
+                    id="input-age"
+                    defaultValue={age}
+                    onChange={handleAgeChanges}
+                  >
                     <option value="Minorenne">Minorenne</option>
-                    <option value="Maggiorenne" selected>
-                      Maggiorenne
-                    </option>
+                    <option value="Maggiorenne">Maggiorenne</option>
                     <option value="Over 65">Over 65</option>
                   </select>
                 </div>
