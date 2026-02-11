@@ -4,3 +4,26 @@
   padding: 5px;
   margin: 5px;
 }
+
+#root {
+  background-image: url(../img/stazione-treni.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+#ticket-gen > *,
+#output-section h2 {
+  background-color: #ffffff;
+}
+
+#input-name,
+#input-distance,
+#input-age {
+  background-color: lightyellow;
+}
+
+#output-section {
+  max-width: 512px;
+}

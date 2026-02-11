@@ -1,5 +1,9 @@
-# Assegnazione del gg/mm/20aa
+# Assegnazione del 11/02/2026
 
-**TITLE**
+**Biglietto Treno**
 
-nome repo: `repo-name`
+nome repo: `react-biglietto-treno-form`
+
+La proposta dell'ex è semplicemente quella di riportare l'ex "biglietto del treno" su react.
+
+**Bonus:** tenere traccia dei biglietti creati, in una colonna a sinistra
